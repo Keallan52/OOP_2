@@ -2,7 +2,9 @@ public class Main
 {
     public static void main(String[] args)
     {
-
+        Numbers.numbers();
+        System.out.println();
+        System.out.println("_____________");
 
         Average average = new Average();
         System.out.println(average.getAverage("string"));
