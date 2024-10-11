@@ -1,19 +1,27 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
 
-public class Main {
-    public static void main(String[] args) {
-        for (int i = 0; i <= 300; i++) {
-            if (i % 4 == 0 && i % 6 != 0 && sumDigits(i) < 10) {
-                System.out.print(i + " ");
-            }
-        }
+
+        Average average = new Average();
+        System.out.println(average.getAverage("string"));
+        System.out.println(average.getAverage("code"));
+        System.out.println(average.getAverage("Practice"));
+        System.out.println("_____________");
+
+        Symbols minimalWordFinder = new Symbols();
+        String sentence0 = "abcd fgg fff jj";
+        String result0 = minimalWordFinder.findSymbols(sentence0);
+        System.out.println("Минимальное количество символов: " + result0);
+        System.out.println("_____________");
+
+        Latinskiy counter = new Latinskiy();
+        String sentence1 = "One two three раз два три one1 two2 123";
+        int result1 = counter.countLatinskiy(sentence1);
+        System.out.println("Минимальное количество слов с латинскими буквами: " + result1);
+        System.out.println("_____________");
     }
 
-    public static int sumDigits(int number) {
-        int sum = 0;
-        while (number > 0) {
-            sum += number % 10;
-            number /= 10;
-        }
-        return sum;
-    }
+
 }
